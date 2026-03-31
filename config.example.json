@@ -1,0 +1,19 @@
+{
+  "presto": {
+    "host": "your-presto-host",
+    "port": 443,
+    "user": "your-presto-user",
+    "password": "your-presto-password",
+    "catalog": "your-presto-catalog",
+    "http_scheme": "https"
+  },
+  "feishu": {
+    "app_id": "your-feishu-app-id",
+    "app_secret": "your-feishu-app-secret",
+    "timeout_seconds": 30,
+    "report_wiki_url": "https://example.feishu.cn/wiki/your-wiki-token"
+  },
+  "report": {
+    "item_info_excel_path": "./公共引用/英雄、武器、装备信息.xlsx"
+  }
+}
