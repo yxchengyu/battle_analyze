@@ -34,12 +34,11 @@ except ImportError as exc:
 try:
     import openpyxl
     import pandas as pd
-    from apscheduler.schedulers.blocking import BlockingScheduler
     from openpyxl.styles import Alignment, Font, PatternFill
 except ImportError as exc:
     raise SystemExit(
-        "当前环境未安装 pandas、openpyxl 或 apscheduler，请先执行 "
-        "`pip install pandas openpyxl apscheduler` 后再运行脚本。"
+        "当前环境未安装 pandas 或 openpyxl，请先执行 "
+        "`pip install pandas openpyxl` 后再运行脚本。"
     ) from exc
 
 
