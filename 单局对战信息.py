@@ -3104,24 +3104,7 @@ def main() -> None:
     logger.info("配置加载完成。")
     logger.info("飞书同步链接：%s", FEISHU_REPORT_WIKI_URL)
     logger.info("日志文件：%s", LOG_FILE_PATH)
-
-    scheduler = BlockingScheduler(timezone=CHINA_TIMEZONE)
-    scheduler.add_job(
-        run_report_job,
-        trigger="interval",
-        minutes=10,
-        next_run_time=datetime.now(CHINA_TIMEZONE),
-        id="battle_analyze_job",
-        max_instances=1,
-        coalesce=True,
-        replace_existing=True,
-    )
-    logger.info("定时任务已启动，每 10 分钟执行一次。")
-
-    try:
-        scheduler.start()
-    except (KeyboardInterrupt, SystemExit):
-        logger.info("定时任务已停止。")
+    run_report_job()
 
 
 if __name__ == "__main__":

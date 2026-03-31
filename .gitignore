@@ -6,5 +6,4 @@ venv/
 config.local.json
 battle_analyze.log
 *.xlsx
-单局对战信息_weekly_cache.json
-
+*_weekly_cache.json
