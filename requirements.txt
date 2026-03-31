@@ -1,4 +1,4 @@
 pandas
 openpyxl
-prestodb
+presto-python-client
 apscheduler
